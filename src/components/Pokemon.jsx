@@ -2,6 +2,7 @@ import React from "react";
 import "../sass/Pokemon.scss";
 
 function Pokemon({ name, img }) {
+
   return (
     <div className="pokemon-container">
       <div className="details">
@@ -9,7 +10,8 @@ function Pokemon({ name, img }) {
         <div className="type"></div>
       </div>
       <div className="img-container">
-        <img src={img} alt="pokeImg"/>
+        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${img}.png`} alt="pokeImg" />
+        
       </div>
     </div>
   );

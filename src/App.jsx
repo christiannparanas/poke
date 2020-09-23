@@ -11,30 +11,20 @@ function App() {
 
   useEffect(() => {
     getAllPokemons();
-    console.log(pokemons);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const getAllPokemons = () => {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=5")
-      .then((res) => {
-        setPokemons(res.data.results);
-        mergeInfo();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  function getAllPokemons() {
+    axios.get("https://pokeapi.co/api/v2/pokemon?limit=10")
+    .then(res => {
+      console.log(res.data.results)
+      setPokemons(res.data.results)
+    })
   };
 
-  const mergeInfo = () => {
-    pokemons.forEach((element) => {
-      axios
-        .get(`https://pokeapi.co/api/v2/pokemon/${element.name}`)
-        .then((res) => {
-          element.infos = res.data;
-        });
-    });
-  };
+  
+  let a = 0  
 
   return (
     <div className="App">
@@ -42,11 +32,12 @@ function App() {
 
       <div className="allpoke">
         {pokemons.map((pokemon) => {
+          a++
           return (
             <Pokemon
               key={pokemon.name}
               name={pokemon.name}
-              img={pokemon.infos.sprites.front_default}
+              img={a}
             />
           );
         })}

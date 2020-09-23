@@ -39,5 +39,16 @@ body {
 
    .allpoke {
       margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+      place-items: center;
+      row-gap: 10px;
+
+      .pokemon-container {
+         width: 95%;
+         border: 5px solid pink;
+         border-radius: 15px;
+      }
    }
 }
