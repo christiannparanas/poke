@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../sass/Pokemon.scss";
-import axios from "axios";
+
 
 function Pokemon({ name, img }) {
   // const [types, setTypes] = useState([]);
