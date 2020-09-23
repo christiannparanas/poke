@@ -3,15 +3,15 @@ import "../sass/Pokemon.scss";
 import axios from "axios";
 
 function Pokemon({ name, img }) {
-  const [types, setTypes] = useState([]);
+  // const [types, setTypes] = useState([]);
 
-  let aa = img;
+  // let aa = img;
 
-  useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${aa}/`).then((res) => {
-      setTypes(res.data.types);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get(`https://pokeapi.co/api/v2/pokemon/${aa}/`).then((res) => {
+  //     setTypes(res.data.types);
+  //   });
+  // }, []);
 
   return (
     <div className="pokemon-container">
