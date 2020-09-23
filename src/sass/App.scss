@@ -8,7 +8,7 @@
 }
 
 body {
-   background-color: #f0fff4;
+   background-color: #fff;
 }
 
 .App {
@@ -31,7 +31,7 @@ body {
          input {
             padding: 10px;
             outline: none;
-            border: 1px solid #c6f6d5;
+            border: 2px solid #c6f6d5;
             border-radius: 8px;
          }
       }
@@ -47,8 +47,42 @@ body {
 
       .pokemon-container {
          width: 95%;
-         border: 5px solid pink;
          border-radius: 15px;
+         background-color: #48D0B0;
+         padding: 20px 20px 50px 20px;
+         position: relative;
+
+         .details {
+
+            .name {
+               text-align: start;
+               color: #fff;
+               text-transform: capitalize;
+               font-weight: 600;
+               margin-bottom: 5px;
+            }
+
+            .types {
+
+               .type {
+                  width: fit-content;
+                  color: #fff;
+                  padding: 3px 8px;
+                  border-radius: 7px;
+                  background-color: #5DDFC6;
+               }
+            }
+         }
+
+         .img-container {
+            position: relative;
+
+            img {
+               position: absolute;
+               top: -50px;
+            }
+         }
+
       }
    }
 }
